@@ -1,0 +1,666 @@
+[
+  {
+    "id": "CPYYXKWYCT",
+    "x": 272,
+    "y": 28,
+    "name": "Project",
+    "cols": [
+      {
+        "id": "SKOODCHWCQ",
+        "idx": 0,
+        "name": "charger_id",
+        "type": "string",
+        "default": "001",
+        "notNull": false,
+        "length": 20,
+        "unique": false,
+        "comment": "主管",
+        "mock_expr": "",
+        "refer": "person"
+      },
+      {
+        "id": "YJYQUPJNJP",
+        "idx": 0,
+        "name": "finished",
+        "type": "boolean",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "完结",
+        "mock_expr": "$.['y','n']"
+      },
+      {
+        "id": "GLDPXZZQCU",
+        "idx": 0,
+        "name": "end_date",
+        "type": "datetime",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "结束日期",
+        "mock_expr": "$.[2000~2020]-$.MONTH-$.DATE"
+      },
+      {
+        "id": "KJIQRFZMUQ",
+        "idx": 0,
+        "name": "begin_date",
+        "type": "datetime",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "开始日期",
+        "mock_expr": "$.[2000~2020]-$.MONTH-$.DATE"
+      },
+      {
+        "id": "CHAFUVJVAR",
+        "idx": 0,
+        "name": "fee",
+        "type": "float",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "项目总额",
+        "mock_expr": "$.[50000~70000]"
+      },
+      {
+        "id": "VPKLTOOBSJ",
+        "idx": 0,
+        "name": "desc",
+        "type": "remark",
+        "default": "",
+        "notNull": false,
+        "length": 150,
+        "unique": false,
+        "comment": "项目备注",
+        "mock_expr": "项目名称为#name#,总额为#fee#"
+      },
+      {
+        "id": "UNXEEJEHDT",
+        "idx": 0,
+        "name": "name",
+        "type": "string",
+        "default": "123",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "项目名称",
+        "mock_expr": "项目$.['A'~'Z']{2}$.[100~999]"
+      },
+      {
+        "id": "TTTJHBMLMY",
+        "name": "project_type",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 300,
+        "unique": false,
+        "comment": "项目类型",
+        "mock_expr": "$.['系统研发','系统维护','信息咨询']"
+      },
+      {
+        "id": "JANVHVXIRR",
+        "name": "id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [],
+        "constraints": [],
+        "comment": "",
+        "unique": false
+      }
+    ]
+  },
+  {
+    "id": "HZXZEDDEEZ",
+    "x": 600,
+    "y": 35,
+    "name": "Mission",
+    "cols": [
+      {
+        "id": "FOMIYCQJJM",
+        "idx": 0,
+        "name": "test",
+        "type": "boolean",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "完结",
+        "mock_expr": ""
+      },
+      {
+        "id": "OOMIYCQJJM",
+        "idx": 0,
+        "name": "finished",
+        "type": "boolean",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "完结",
+        "mock_expr": ""
+      },
+      {
+        "id": "MOVCKBYLTJ",
+        "idx": 0,
+        "name": "plan_period",
+        "type": "int",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "周期",
+        "mock_expr": ""
+      },
+      {
+        "id": "QVXIHKVRZK",
+        "idx": 0,
+        "name": "charger_id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "负责人",
+        "mock_expr": "",
+        "refer": "person"
+      },
+      {
+        "id": "WJFECXTAHT",
+        "idx": 0,
+        "name": "id",
+        "type": "int",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "",
+        "mock_expr": ""
+      },
+      {
+        "id": "CBNIPWSSTK",
+        "idx": 0,
+        "name": "desc",
+        "type": "remark",
+        "default": "",
+        "notNull": false,
+        "length": 30,
+        "unique": false,
+        "comment": "备注",
+        "mock_expr": "mission名称是#name#"
+      },
+      {
+        "id": "EBITALYLQL",
+        "idx": 0,
+        "name": "name",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "名称",
+        "mock_expr": ""
+      },
+      {
+        "id": "DPVLHTXWKU",
+        "name": "task_id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [],
+        "constraints": [],
+        "comment": "所属任务",
+        "refer": "task"
+      }
+    ]
+  },
+  {
+    "id": "CKDCTFZTNP",
+    "x": 314,
+    "y": 275,
+    "name": "Department",
+    "cols": [
+      {
+        "id": "WBMHKZHWFX",
+        "idx": 0,
+        "name": "charger_id",
+        "type": "int",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "",
+        "mock_expr": "",
+        "refer": "person"
+      },
+      {
+        "id": "CQOEWIBNKI",
+        "idx": 0,
+        "name": "desc",
+        "type": "remark",
+        "default": "",
+        "notNull": false,
+        "length": 100,
+        "unique": false,
+        "comment": "",
+        "mock_expr": "部门的名称是#name#"
+      },
+      {
+        "id": "ACORQKFAXI",
+        "idx": 0,
+        "name": "name",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "名称",
+        "mock_expr": ""
+      },
+      {
+        "id": "UDLIYAFUBK",
+        "name": "id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [],
+        "constraints": [],
+        "comment": "",
+        "unique": false
+      }
+    ]
+  },
+  {
+    "id": "WPCMXFGURY",
+    "x": 414,
+    "y": 54,
+    "name": "Task",
+    "cols": [
+      {
+        "id": "APMXDTEYGB",
+        "idx": 0,
+        "name": "project_id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "所属项目",
+        "mock_expr": "",
+        "refer": "project"
+      },
+      {
+        "id": "ELIUTFROPM",
+        "idx": 0,
+        "name": "charger_id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "主管",
+        "mock_expr": "",
+        "refer": "person"
+      },
+      {
+        "id": "BERKXZUZCY",
+        "idx": 0,
+        "name": "finished",
+        "type": "boolean",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "完结",
+        "mock_expr": "$.['y','n']"
+      },
+      {
+        "id": "PDFFNGHDAO",
+        "idx": 0,
+        "name": "end_date",
+        "type": "datetime",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "结束日期",
+        "mock_expr": "$.[2000~2020]-$.MONTH-$.DATE"
+      },
+      {
+        "id": "TOZSGZKDEA",
+        "idx": 0,
+        "name": "begin_date",
+        "type": "datetime",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "开始日期",
+        "mock_expr": "$.[2000~2020]-$.MONTH-$.DATE"
+      },
+      {
+        "id": "ANZFZFGXCT",
+        "idx": 0,
+        "name": "fee",
+        "type": "float",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "总额",
+        "mock_expr": "$.[10000~20000]"
+      },
+      {
+        "id": "ZYBBJFTZOE",
+        "idx": 0,
+        "name": "desc",
+        "type": "remark",
+        "default": "",
+        "notNull": false,
+        "length": 115,
+        "unique": false,
+        "comment": "备注",
+        "mock_expr": "任务名称是#name#，总额是#fee#"
+      },
+      {
+        "id": "EFBPVFPDNG",
+        "idx": 0,
+        "name": "name",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "人物名称",
+        "mock_expr": ""
+      },
+      {
+        "id": "MROENYLFSY",
+        "name": "id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [],
+        "constraints": [],
+        "comment": "",
+        "unique": false
+      }
+    ]
+  },
+  {
+    "id": "JIZYCRLHXA",
+    "x": 80,
+    "y": 160,
+    "name": "Person",
+    "cols": [
+      {
+        "id": "IAQXWZXNFB",
+        "idx": 0,
+        "name": "id",
+        "type": "int",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "",
+        "mock_expr": ""
+      },
+      {
+        "id": "AAQXWZXNFB",
+        "idx": 0,
+        "name": "login_data",
+        "type": "json",
+        "default": "",
+        "notNull": false,
+        "length": 30,
+        "unique": false,
+        "comment": "",
+        "mock_expr": ""
+      },
+      {
+        "id": "MTRNXFCBXY",
+        "idx": 0,
+        "name": "remark3",
+        "type": "remark",
+        "default": "",
+        "notNull": false,
+        "length": 120,
+        "unique": false,
+        "comment": "备注",
+        "mock_expr": "我名叫#name#,今年#age#岁,身份证为#identityno#,手机号是#mobile#."
+      },
+      {
+        "id": "GZBKROGYEV",
+        "idx": 0,
+        "name": "identityno",
+        "type": "identityno",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [
+          "identityno"
+        ],
+        "mock_expr": "",
+        "comment": "身份证"
+      },
+      {
+        "id": "HHPCUSSJYS",
+        "idx": 0,
+        "name": "mobile",
+        "type": "mobile",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [
+          "mobile"
+        ],
+        "mock_expr": "",
+        "comment": "手机号码"
+      },
+      {
+        "id": "FLTKLMSDYF",
+        "idx": 0,
+        "name": "email",
+        "type": "email",
+        "default": "",
+        "notNull": false,
+        "length": 30,
+        "validators": [
+          "mail"
+        ],
+        "mock_expr": "",
+        "comment": "邮箱"
+      },
+      {
+        "id": "PGSEKXBYCY",
+        "idx": 0,
+        "name": "checkin_time",
+        "type": "time",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "mock_expr": "$.HOUR:$.MINUTE:$.SECOND",
+        "comment": "签到时间"
+      },
+      {
+        "id": "ADEEVIUNRI",
+        "idx": 0,
+        "name": "register_dt",
+        "type": "datetime",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "mock_expr": "$.[2020~2024]-$.MONTH-$.DATE $.HOUR:$.MONTH:$.SECOND",
+        "comment": "注册日期"
+      },
+      {
+        "id": "ZYQQQJLIVG",
+        "idx": 0,
+        "name": "birth_date",
+        "type": "date",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "mock_expr": "$.[1980~2000]-$.MONTH-$.DATE",
+        "comment": "生日"
+      },
+      {
+        "id": "CFRHIIJIYK",
+        "idx": 0,
+        "name": "salary",
+        "type": "float",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "mock_expr": "$.[3000~15000]",
+        "comment": "工资"
+      },
+      {
+        "id": "AHBASJVIPQ",
+        "idx": 0,
+        "name": "age",
+        "type": "int",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "mock_expr": "$.NUMBER",
+        "comment": "年龄"
+      },
+      {
+        "id": "XHYDDXHJWB",
+        "idx": 0,
+        "name": "name",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "unique": false,
+        "comment": "姓名",
+        "mock_expr": "$.NAME"
+      },
+      {
+        "id": "VUHOIDXUIJ",
+        "name": "face",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 41,
+        "validators": [],
+        "constraints": [],
+        "comment": "头像",
+        "mock_expr": "$.PORTRAIT"
+      }
+    ]
+  },
+  {
+    "id": "IFATOPINLM",
+    "x": 817,
+    "y": 147,
+    "name": "role",
+    "cols": [
+      {
+        "id": "OPBODRYUOO",
+        "idx": 0,
+        "name": "id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "unique": false,
+        "length": 10,
+        "validators": [],
+        "comment": "",
+        "mock_expr": ""
+      },
+      {
+        "id": "ISGJQOPKSG",
+        "name": "name",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [],
+        "constraints": [],
+        "comment": ""
+      }
+    ]
+  },
+  {
+    "id": "MDRUHSGMKK",
+    "x": 632,
+    "y": 291,
+    "name": "UserRole",
+    "cols": [
+      {
+        "id": "ZZIAGMLAMU",
+        "idx": 0,
+        "name": "id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "unique": false,
+        "length": 10,
+        "validators": [],
+        "comment": "",
+        "mock_expr": ""
+      },
+      {
+        "id": "IWFREGHEUF",
+        "name": "user_id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [],
+        "constraints": [],
+        "comment": "",
+        "refer": "user"
+      },
+      {
+        "id": "SPBSLPSCCJ",
+        "name": "role_id",
+        "type": "string",
+        "default": "",
+        "notNull": false,
+        "length": 10,
+        "validators": [],
+        "constraints": [],
+        "comment": "",
+        "refer": "role"
+      }
+    ]
+  },
+  {
+    "id": "JEECQUTRLI",
+    "x": 512,
+    "y": 267.5,
+    "name": "A",
+    "cols": [
+      {
+        "id": "IKXOZNPYLP",
+        "idx": 0,
+        "name": "B",
+        "type": "int",
+        "default": "",
+        "notNull": false,
+        "unique": false,
+        "length": 10,
+        "validators": [],
+        "comment": "",
+        "mock_expr": ""
+      }
+    ]
+  }
+]
